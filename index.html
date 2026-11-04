@@ -96,12 +96,16 @@
 				statusEl.textContent = 'Open this gallery inside PowerPoint to insert an icon.';
 				return;
 			}
+			if (!Office.context.requirements.isSetSupported('ImageCoercion', '1.2')) {
+				statusEl.textContent = 'This PowerPoint version does not support SVG insertion from add-ins. Update PowerPoint or insert the SVG using PowerPoint’s Insert → Picture command.';
+				return;
+			}
 			statusEl.textContent = `Adding ${file.path}…`;
 			try {
 				const response = await fetch(rawUrl(file.path));
 				if (!response.ok) throw new Error('Could not download that SVG.');
 				const svg = await response.text();
-				Office.context.document.setSelectedDataAsync(svg, { coercionType: Office.CoercionType.Image }, result => {
+				Office.context.document.setSelectedDataAsync(svg, { coercionType: Office.CoercionType.XmlSvg }, result => {
 					statusEl.textContent = result.status === Office.AsyncResultStatus.Succeeded
 						? `${file.path} added to the slide.`
 						: `PowerPoint could not insert the SVG: ${result.error.message}`;
