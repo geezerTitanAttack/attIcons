@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>attIcons PowerPoint Gallery</title>
+	<script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+	<style>
+		body { font: 14px "Segoe UI", Arial, sans-serif; color: #242424; margin: 18px; }
+		h1 { font-size: 20px; margin: 0 0 6px; }
+		p { line-height: 1.45; }
+		#status { min-height: 1.3em; color: #555; }
+		#filter { box-sizing: border-box; width: 100%; padding: 8px; margin: 8px 0 12px; }
+		#gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 8px; }
+		.icon { min-height: 96px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; background: white; cursor: pointer; }
+		.icon img { width: 52px; height: 52px; display: block; object-fit: contain; margin: 0 auto 6px; }
+		.icon span { display: block; font-size: 11px; overflow-wrap: anywhere; }
+		details { margin-top: 20px; }
+		button.primary { background: #5b2da3; color: white; border: 0; border-radius: 4px; padding: 8px 12px; cursor: pointer; }
+	</style>
+</head>
+<body>
+	<h1>attIcons</h1>
+	<p>Click an SVG to insert it on the current PowerPoint slide.</p>
+	<button class="primary" id="download-manifest">Download PowerPoint setup file</button>
+	<p id="status" role="status">Loading icons from GitHub…</p>
+	<input id="filter" type="search" placeholder="Search icons…" aria-label="Search icons" disabled>
+	<section id="gallery" aria-label="SVG icon gallery"></section>
+	<details>
+		<summary>Install it (step by step)</summary>
+		<ol>
+			<li>Put this HTML page on a secure HTTPS website. GitHub Pages is one option: enable Pages for the repository and save this page there as <code>index.html</code>.</li>
+			<li>Open the hosted page in your browser and click <b>Download PowerPoint setup file</b>.</li>
+			<li>In PowerPoint, choose <b>Insert → Get Add-ins → My Add-ins → Upload My Add-in</b>. Select the downloaded <code>attIcons-manifest.xml</code>.</li>
+			<li>Open attIcons from <b>Insert → My Add-ins</b>. Click an icon to add it to the slide.</li>
+		</ol>
+		<p>Keep this page online for PowerPoint to use it. The public GitHub repository is checked for SVG files whenever the add-in opens. For managed company-wide distribution, an administrator can deploy the manifest through Microsoft 365 Integrated Apps.</p>
+	</details>
+
+	<script>
+		'use strict';
+		const OWNER = 'geezerTitanAttack';
+		const REPO = 'attIcons';
+		const statusEl = document.getElementById('status');
+		const galleryEl = document.getElementById('gallery');
+		const filterEl = document.getElementById('filter');
+		let svgFiles = [];
+
+		function rawUrl(path) {
+			const safePath = path.split('/').map(encodeURIComponent).join('/');
+			return `https://raw.githubusercontent.com/${OWNER}/${REPO}/HEAD/${safePath}`;
+		}
+
+		async function loadGallery() {
+			try {
+				const repoResponse = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}`);
+				if (!repoResponse.ok) throw new Error('GitHub could not open the repository.');
+				const repoInfo = await repoResponse.json();
+				const treeResponse = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/trees/${encodeURIComponent(repoInfo.default_branch)}?recursive=1`);
+				if (!treeResponse.ok) throw new Error('GitHub could not list the files.');
+				const treeInfo = await treeResponse.json();
+				svgFiles = (treeInfo.tree || []).filter(file => file.type === 'blob' && file.path.toLowerCase().endsWith('.svg'));
+				if (!svgFiles.length) {
+					statusEl.textContent = 'No SVG files found. Add SVG icons to the GitHub repository and refresh.';
+					return;
+				}
+				filterEl.disabled = false;
+				statusEl.textContent = `${svgFiles.length} icon${svgFiles.length === 1 ? '' : 's'} ready.`;
+				drawGallery();
+			} catch (error) {
+				statusEl.textContent = `${error.message} Check that the repository is public and try again.`;
+			}
+		}
+
+		function drawGallery() {
+			const query = filterEl.value.trim().toLowerCase();
+			galleryEl.replaceChildren();
+			svgFiles.filter(file => file.path.toLowerCase().includes(query)).forEach(file => {
+				const button = document.createElement('button');
+				button.type = 'button';
+				button.className = 'icon';
+				button.title = `Insert ${file.path}`;
+				const image = document.createElement('img');
+				image.src = rawUrl(file.path);
+				image.alt = '';
+				const name = document.createElement('span');
+				name.textContent = file.path;
+				button.append(image, name);
+				button.addEventListener('click', () => addToSlide(file));
+				galleryEl.append(button);
+			});
+		}
+
+		async function addToSlide(file) {
+			if (!window.Office || !Office.context || !Office.context.document) {
+				statusEl.textContent = 'Open this gallery inside PowerPoint to insert an icon.';
+				return;
+			}
+			statusEl.textContent = `Adding ${file.path}…`;
+			try {
+				const response = await fetch(rawUrl(file.path));
+				if (!response.ok) throw new Error('Could not download that SVG.');
+				const svg = await response.text();
+				Office.context.document.setSelectedDataAsync(svg, { coercionType: Office.CoercionType.Image }, result => {
+					statusEl.textContent = result.status === Office.AsyncResultStatus.Succeeded
+						? `${file.path} added to the slide.`
+						: `PowerPoint could not insert the SVG: ${result.error.message}`;
+				});
+			} catch (error) {
+				statusEl.textContent = error.message;
+			}
+		}
+
+		document.getElementById('download-manifest').addEventListener('click', () => {
+			if (location.protocol !== 'https:') {
+				statusEl.textContent = 'This setup file needs the page to be hosted on HTTPS first.';
+				return;
+			}
+			const pageUrl = location.href.split('#')[0];
+			const escapeXml = text => text.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
+			const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TaskPaneApp">
+	<Id>4db77cac-0836-4d55-ae50-8cd2ad58aac1</Id>
+	<Version>1.0.0.0</Version><ProviderName>attIcons</ProviderName><DefaultLocale>en-US</DefaultLocale>
+	<DisplayName DefaultValue="attIcons"/><Description DefaultValue="Curated SVG icon gallery for PowerPoint."/>
+	<IconUrl DefaultValue="https://raw.githubusercontent.com/${OWNER}/${REPO}/HEAD/icon-32.png"/><HighResolutionIconUrl DefaultValue="https://raw.githubusercontent.com/${OWNER}/${REPO}/HEAD/icon-64.png"/>
+	<SupportUrl DefaultValue="https://github.com/${OWNER}/${REPO}"/>
+	<AppDomains><AppDomain>https://github.com</AppDomain><AppDomain>https://raw.githubusercontent.com</AppDomain></AppDomains>
+	<Hosts><Host Name="Presentation"/></Hosts>
+	<DefaultSettings><SourceLocation DefaultValue="${escapeXml(pageUrl)}"/></DefaultSettings>
+	<Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>`;
+			const blobUrl = URL.createObjectURL(new Blob([xml], { type: 'application/xml' }));
+			const link = document.createElement('a');
+			link.href = blobUrl;
+			link.download = 'attIcons-manifest.xml';
+			link.click();
+			URL.revokeObjectURL(blobUrl);
+			statusEl.textContent = 'Setup file downloaded. Follow the install steps above.';
+		});
+
+		filterEl.addEventListener('input', drawGallery);
+		if (window.Office) Office.onReady(loadGallery);
+		else loadGallery();
+	</script>
+</body>
+</html>
