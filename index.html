@@ -87,15 +87,18 @@
 				const button = document.createElement('button');
 				button.type = 'button';
 				button.className = 'icon';
-				button.title = `Insert ${file.path}`;
+				button.title = `${file.path}`;
 				getSvgTitle(file).then(title => {
-					if (title) button.title = `Insert ${title}`;
+					if (title) {
+						button.title = `Insert ${title}`;
+						name.textContent = title;
+					}
 				});
 				const image = document.createElement('img');
 				image.src = rawUrl(file.path);
 				image.alt = '';
 				const name = document.createElement('span');
-				name.textContent = file.path;
+				name.textContent = button.title;
 				button.append(image, name);
 				button.addEventListener('click', () => addToSlide(file));
 				galleryEl.append(button);
