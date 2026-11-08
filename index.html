@@ -88,15 +88,18 @@
 				button.type = 'button';
 				button.className = 'icon';
 				button.title = `Insert ${file.path}`;
-				getSvgTitle(file).then(title => {
-					if (title) button.title = `Insert ${title}`;
-				});
 				const image = document.createElement('img');
 				image.src = rawUrl(file.path);
 				image.alt = '';
 				const name = document.createElement('span');
-				name.textContent = button.title;
+				name.textContent = file.path;
 				button.append(image, name);
+				getSvgTitle(file).then(title => {
+					if (title) {
+						name.textContent = title;
+						button.title = `Insert ${title}`;
+					}
+				});
 				button.addEventListener('click', () => addToSlide(file));
 				galleryEl.append(button);
 			});
