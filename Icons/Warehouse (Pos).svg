@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Icon__x28_Outline_x29_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve">
+  <title>Warehouse (Pos)</title>
+<style type="text/css">
+	.st0{fill:#009FDB;}
+</style>
+<g>
+	<path d="M51.7,12.6c-2.2-1.7-5.3-1.7-7.5,0L12,37.7L12,80c0,1.6,0.6,3.1,1.8,4.2c1.1,1.1,2.6,1.8,4.2,1.8h60c3.3,0,6-2.7,6-6
+		l0-42.3L51.7,12.6z M27,84v-6h42v6H27z M69,52H27v-6h42V52z M27,54h42v6H27V54z M27,62h42v6H27V62z M27,70h42v6H27V70z M82,80
+		c0,2.2-1.8,4-4,4h-7V44H25v40h-7c-1.1,0-2.1-0.4-2.8-1.2C14.4,82.1,14,81.1,14,80l0-41.3l31.5-24.5c1.5-1.1,3.5-1.1,5,0L82,38.7
+		L82,80z"/>
+	<path class="st0" d="M59,37H37v-2c0-6.1,4.9-11,11-11s11,4.9,11,11V37z M39,35h18c0-5-4-9-9-9S39,30,39,35z"/>
+</g>
+</svg>
