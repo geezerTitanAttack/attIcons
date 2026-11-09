@@ -43,6 +43,26 @@
 			return `https://raw.githubusercontent.com/${OWNER}/${REPO}/HEAD/${safePath}`;
 		}
 
+		function readAsBase64(blob) {
+			return new Promise((resolve, reject) => {
+				const reader = new FileReader();
+				reader.onload = () => {
+					if (typeof reader.result !== 'string') {
+						reject(new Error('Could not read that SVG.'));
+						return;
+					}
+					const separatorIndex = reader.result.indexOf(',');
+					if (separatorIndex < 0) {
+						reject(new Error('Could not read that SVG.'));
+						return;
+					}
+					resolve(reader.result.slice(separatorIndex + 1));
+				};
+				reader.onerror = () => reject(reader.error || new Error('Could not read that SVG.'));
+				reader.readAsDataURL(blob);
+			});
+		}
+
 		function getSvgTitle(file) {
 			if (!svgTitleCache.has(file.path)) {
 				svgTitleCache.set(file.path, fetch(rawUrl(file.path))
@@ -114,8 +134,8 @@
 			try {
 				const response = await fetch(rawUrl(file.path));
 				if (!response.ok) throw new Error('Could not download that SVG.');
-				const svg = await response.text();
-				Office.context.document.setSelectedDataAsync(svg, { coercionType: Office.CoercionType.Image }, result => {
+				const imageData = await readAsBase64(await response.blob());
+				Office.context.document.setSelectedDataAsync(imageData, { coercionType: Office.CoercionType.Image }, result => {
 					statusEl.textContent = result.status === Office.AsyncResultStatus.Succeeded
 						? `${file.path} added to the slide.`
 						: `PowerPoint could not insert the SVG: ${result.error.message}`;
