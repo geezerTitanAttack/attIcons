@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Icon__x28_Outline_x29_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve">
+  <title>School (Pos)</title>
+<style type="text/css">
+	.st0{fill:#009FDB;}
+</style>
+<g>
+	<path d="M67,51V39.5L48,26.8L29,39.1V51H10v29c0,3.3,2.7,6,6,6h64c3.3,0,6-2.7,6-6V51H67z M16,84c-2.2,0-4-1.8-4-4V53h17v31H16z
+		 M53,84H43v-8.1c0-2.7,2.2-4.9,4.9-4.9h0.1c2.7,0,4.9,2.2,4.9,4.9V84z M55,84v-8.1c0-3.8-3.1-6.9-6.9-6.9h-0.1
+		c-3.8,0-6.9,3.1-6.9,6.9V84H31V40.2l17-11l17,11.3V84H55z M84,80c0,2.2-1.8,4-4,4H67V53h17V80z"/>
+	<path d="M48,37c-6.1,0-11,4.9-11,11s4.9,11,11,11s11-4.9,11-11S54.1,37,48,37z M48,57c-5,0-9-4-9-9s4-9,9-9s9,4,9,9S53,57,48,57z"
+		/>
+	<polygon points="49,43 47,43 47,48.5 50.2,51.7 51.6,50.3 49,47.6 	"/>
+	<rect x="16" y="62" width="9" height="2"/>
+	<rect x="16" y="73" width="9" height="2"/>
+	<rect x="71" y="62" width="9" height="2"/>
+	<rect x="71" y="73" width="9" height="2"/>
+	<path class="st0" d="M49,24h-2V11.1l14.8,5.5L49,20.9V24z M49,14v4.8l6.8-2.3L49,14z"/>
+</g>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Icon__x28_Outline_x29_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve">
+  <title>pictgram_battery-charging_rev</title>
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#009FDB;}
+</style>
+<g>
+	<g>
+		<g>
+			<path class="st0" d="M77,75H12c-3.31,0-6-2.69-6-6V28c0-3.31,2.69-6,6-6h65c3.31,0,6,2.69,6,6v11h3c2.21,0,4,1.79,4,4v11
+				c0,2.21-1.79,4-4,4h-3v11C83,72.31,80.31,75,77,75z M12,24c-2.21,0-4,1.79-4,4v41c0,2.21,1.79,4,4,4h65c2.21,0,4-1.79,4-4V56h5
+				c1.1,0,2-0.9,2-2V43c0-1.1-0.9-2-2-2h-5V28c0-2.21-1.79-4-4-4H12z"/>
+		</g>
+	</g>
+	<path class="st1" d="M44,39.05L59.2,50H46v6.95L30.8,46H44V39.05 M42,35.14v3.91V44H30.8h-6.19l5.03,3.62l15.2,10.95L48,60.86
+		v-3.91V52h11.2h6.19l-5.03-3.62l-15.2-10.95L42,35.14L42,35.14z"/>
+</g>
+</svg>

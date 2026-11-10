@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Icon__x28_Outline_x29_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve">
+  <title>Wifi (Pos)</title>
+<style type="text/css">
+	.st0{fill:#009FDB;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M34,59l1.4,1.4c6.9-6.9,18.2-6.9,25.1,0L62,59C54.3,51.3,41.7,51.3,34,59z"/>
+		<path class="st0" d="M21.5,46.4l1.4,1.4c6.7-6.7,15.6-10.4,25.1-10.4s18.4,3.7,25.1,10.4l1.4-1.4c-7.1-7.1-16.5-11-26.6-11
+			S28.6,39.3,21.5,46.4z"/>
+		<path class="st0" d="M9.3,34.3l1.4,1.4c20.6-20.6,54-20.6,74.6,0l1.4-1.4C65.4,12.9,30.6,12.9,9.3,34.3z"/>
+	</g>
+	<path d="M48,79c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6S51.3,79,48,79z M48,69c-2.2,0-4,1.8-4,4s1.8,4,4,4s4-1.8,4-4S50.2,69,48,69z"
+		/>
+</g>
+</svg>

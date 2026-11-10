@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Icon__x28_Outline_x29_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve">
+  <title>Printer (Pos)</title>
+<style type="text/css">
+	.st0{fill:#009FDB;}
+</style>
+<g>
+	<path d="M73,31V9H23v22H6v29c0,3.3,2.7,6,6,6h8v-2h-8c-2.2,0-4-1.8-4-4V33h15h50h15v27c0,2.2-1.8,4-4,4h-8v2h8c3.3,0,6-2.7,6-6V31
+		H73z M25,31V11h46v20H25z"/>
+	<path d="M81.5,44c1.9,0,3.5-1.6,3.5-3.5S83.4,37,81.5,37h-2c-1.9,0-3.5,1.6-3.5,3.5s1.6,3.5,3.5,3.5H81.5z M78,40.5
+		c0-0.8,0.7-1.5,1.5-1.5h2c0.8,0,1.5,0.7,1.5,1.5S82.3,42,81.5,42h-2C78.7,42,78,41.3,78,40.5z"/>
+	<path d="M23,86h50V57H23V86z M25,59h46v25H25V59z"/>
+	<rect x="32" y="66" class="st0" width="32" height="2"/>
+	<rect x="32" y="75" class="st0" width="32" height="2"/>
+</g>
+</svg>

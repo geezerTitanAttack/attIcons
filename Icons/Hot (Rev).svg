@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Icon__x28_Outline_x29_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve">
+  <title>Hot (Rev)</title>
+<style type="text/css">
+	.st0{fill:#009FDB;}
+	.st1{fill:#FFFFFF;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M68,18c-5,0-9,4-9,9c0,5,4,9,9,9c5,0,9-4,9-9C77,22,73,18,68,18z M68,34c-3.9,0-7-3.1-7-7s3.1-7,7-7
+			s7,3.1,7,7S71.9,34,68,34z"/>
+		<rect x="67" y="11" class="st0" width="2" height="4"/>
+		<rect x="57.1" y="15.1" transform="matrix(0.707 -0.7072 0.7072 0.707 4.9305 46.1015)" class="st0" width="2" height="4"/>
+		<rect x="52" y="26" class="st0" width="4" height="2"/>
+		<rect x="56.1" y="35.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -9.0739 51.8915)" class="st0" width="4" height="2"/>
+		<rect x="67" y="39" class="st0" width="2" height="4"/>
+		<rect x="76.9" y="34.9" transform="matrix(0.707 -0.7072 0.7072 0.707 -3.2698 65.9049)" class="st0" width="2" height="4"/>
+		<rect x="80" y="26" class="st0" width="4" height="2"/>
+		<rect x="75.9" y="16.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 10.7246 60.0917)" class="st0" width="4" height="2"/>
+	</g>
+	<path class="st1" d="M36,56.1V24h-2v32.1c-4.5,0.5-8,4.3-8,8.9c0,5,4,9,9,9s9-4,9-9C44,60.4,40.5,56.6,36,56.1z M35,72
+		c-3.9,0-7-3.1-7-7s3.1-7,7-7s7,3.1,7,7S38.9,72,35,72z"/>
+	<path class="st1" d="M47,47.8L47,22c0-6.6-5.4-12-12-12s-12,5.4-12,12l0,25.8c-5.6,3.9-9,10.3-9,17.2c0,11.6,9.4,21,21,21
+		s21-9.4,21-21C56,58.1,52.6,51.7,47,47.8z M35,84c-10.5,0-19-8.5-19-19c0-6.4,3.2-12.3,8.6-15.9l0.4-0.3L25,22c0-5.5,4.5-10,10-10
+		s10,4.5,10,10l0,26.8l0.4,0.3C50.8,52.7,54,58.6,54,65C54,75.5,45.5,84,35,84z"/>
+</g>
+</svg>

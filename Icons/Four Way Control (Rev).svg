@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Icon__x28_Outline_x29_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve">
+  <title>Four Way Control (Rev)</title>
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#009FDB;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M48,86c-20.95,0-38-17.05-38-38s17.05-38,38-38s38,17.05,38,38S68.95,86,48,86z M48,12
+			c-19.85,0-36,16.15-36,36s16.15,36,36,36s36-16.15,36-36S67.85,12,48,12z"/>
+	</g>
+</g>
+<g>
+	<polygon class="st1" points="47,29.41 47,41 49,41 49,29.41 54.29,34.71 55.71,33.29 48,25.59 40.29,33.29 41.71,34.71 	"/>
+	<polygon class="st1" points="49,66.59 49,55 47,55 47,66.59 41.71,61.29 40.29,62.71 48,70.41 55.71,62.71 54.29,61.29 	"/>
+	<polygon class="st1" points="62.71,40.29 61.29,41.71 66.59,47 55,47 55,49 66.59,49 61.29,54.29 62.71,55.71 70.41,48 	"/>
+	<polygon class="st1" points="41,49 41,47 29.41,47 34.71,41.71 33.29,40.29 25.59,48 33.29,55.71 34.71,54.29 29.41,49 	"/>
+</g>
+</svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Icon__x28_Outline_x29_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve">
+  <title>Wind Heavy (Rev)</title>
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#009FDB;}
+</style>
+<g>
+	<path class="st0" d="M71,42H10v-2h61c7.7,0,14-6.3,14-14s-6.3-14-14-14s-14,6.3-14,14h-2c0-8.8,7.2-16,16-16s16,7.2,16,16
+		S79.8,42,71,42z"/>
+	<path class="st0" d="M44,78c-4.4,0-8-3.6-8-8h2c0,3.3,2.7,6,6,6s6-2.7,6-6s-2.7-6-6-6H10v-2h34c4.4,0,8,3.6,8,8S48.4,78,44,78z"/>
+	<path class="st1" d="M71,73c-6.1,0-11-4.9-11-11h2c0,5,4,9,9,9s9-4,9-9s-4-9-9-9H10v-2h61c6.1,0,11,4.9,11,11S77.1,73,71,73z"/>
+</g>
+</svg>
