@@ -6,23 +6,23 @@
 	<title>AT&T Icon Gallery</title>
 	<script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
 	<style>
-		body { font: 14px "Segoe UI", Arial, sans-serif; margin: 18px; }
+		body { font: 14px "Segoe UI", Arial, sans-serif; margin: 18px; color: #777; }
 		h1 { font-size: 20px; margin: 0 0 6px; }
 		p { line-height: 1.45; }
-		#status { min-height: 1.3em; color: #555; }
+		#status { min-height: 1.3em; color: #777; }
 		#filter { box-sizing: border-box; width: 100%; padding: 8px; margin: 8px 0 12px; }
 		#gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 8px; }
 		.icon { min-height: 96px; padding: 8px; border: 1px solid #dcdcdc; border-radius: 4px; background: #dcdcdc; cursor: pointer; }
 		.icon img { width: 52px; height: 52px; display: block; object-fit: contain; margin: 0 auto 6px; }
 		.icon span { display: block; font-size: 11px; overflow-wrap: anywhere; }
 		details { margin-top: 20px; }
-		button.primary { background: #5b2da3; color: white; border: 0; border-radius: 4px; padding: 8px 12px; cursor: pointer; }
+		button.primary { display: none; background: #5b2da3; color: white; border: 0; border-radius: 4px; padding: 8px 12px; cursor: pointer; }
 	</style>
 </head>
 <body>
 	<h1>AT&T Icon Gallery</h1>
 	<p>Click an icon to insert it on the current PowerPoint slide.</p>
-	<button class="primary" id="download-manifest">Download PowerPoint setup file</button>
+	<button class="primary" id="download-manifest"></button>
 	<p id="status" role="status">Loading icons from GitHub…</p>
 	<input id="filter" type="search" placeholder="Search icons…" aria-label="Search icons" disabled>
 	<section id="gallery" aria-label="SVG icon gallery"></section>
