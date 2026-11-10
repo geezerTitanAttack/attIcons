@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Icon__x28_Outline_x29_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 96 96" style="enable-background:new 0 0 96 96;" xml:space="preserve">
+  <title>Refurbished Device (Rev)</title>
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#009FDB;}
+</style>
+<g>
+	<rect x="40" y="13" class="st0" width="16" height="2"/>
+	<path class="st0" d="M68,90H28c-3.3,0-6-2.7-6-6V12c0-3.3,2.7-6,6-6h40c3.3,0,6,2.7,6,6v72C74,87.3,71.3,90,68,90z M28,8
+		c-2.2,0-4,1.8-4,4v72c0,2.2,1.8,4,4,4h40c2.2,0,4-1.8,4-4V12c0-2.2-1.8-4-4-4H28z"/>
+	<path class="st1" d="M65.8,53l-1.7,1c1.2,2.1,1.2,4.6,0,6.6c-1.2,2.1-3.3,3.3-5.7,3.3h-9.8l5.4-5.4l-1.4-1.4l-7.8,7.8l7.8,7.8
+		l1.4-1.4l-5.4-5.4h9.8c3.1,0,5.9-1.6,7.5-4.3C67.4,58.9,67.4,55.7,65.8,53z"/>
+	<path class="st1" d="M54.2,37.3l4.9,8.5l-7.4-1.9l-0.5,1.9l10.7,2.7l2.7-10.7l-1.9-0.5l-1.9,7.3l-4.9-8.4c-1.6-2.7-4.4-4.3-7.5-4.3
+		c-3.1,0-5.9,1.6-7.5,4.3l1.7,1c1.2-2.1,3.3-3.3,5.7-3.3C50.9,34,53,35.2,54.2,37.3z"/>
+	<path class="st1" d="M28.7,44.5l0.5,1.9l7.3-2l-4.9,8.4c-1.6,2.7-1.6,5.9,0,8.6c1.6,2.7,4.4,4.3,7.5,4.3v-2c-2.4,0-4.5-1.2-5.7-3.3
+		s-1.2-4.6,0-6.6l4.9-8.5l2.1,7.3l1.9-0.5l-3-10.6L28.7,44.5z"/>
+</g>
+</svg>
